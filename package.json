@@ -18,8 +18,7 @@
     "fix:prettier": "prettier \"{,!(dist|temp|bundle)/**/}*.{ts,tsx}\" --write",
     "build": "rimraf bundle && webpack",
     "start": "webpack-dev-server --progress",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "jest --coverage",
     "lint": "eslint . --ext .tsx,.ts --cache"
   },
   "private": true,
