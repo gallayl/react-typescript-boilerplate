@@ -7,6 +7,11 @@ export interface LoginFormProps {
    * Callback that will be called when the user clicks on the Login button
    */
   onLogin: (username: string, passowrd: string, repository: string) => void
+
+  /**
+   * An optional error message
+   */
+  error?: string
 }
 
 /**
@@ -65,6 +70,8 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = props => {
               setUrl(ev.target.value)
             }}
           />
+          {props.error ? <Typography color="error">{props.error}</Typography> : null}
+
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1em' }}>
             <Button style={{ width: '100%' }} type="submit">
               <Typography variant="button">Log in</Typography>

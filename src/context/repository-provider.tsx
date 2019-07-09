@@ -23,7 +23,7 @@ export const RepositoryProvider: React.FunctionComponent<
 > = props => {
   const [currentRepoUrl, setCurrentRepoUrl] = useState(localStorage.getItem(lastRepositoryKey) || '')
   const [currentRepo, setCurrentRepo] = useState(new Repository({ ...props, repositoryUrl: currentRepoUrl }))
-
+  const [loginError, setLoginError] = useState('')
   const [loginState, setLoginState] = useState(LoginState.Unknown)
 
   useEffect(() => {
@@ -41,9 +41,18 @@ export const RepositoryProvider: React.FunctionComponent<
       {loginState === LoginState.Authenticated ? props.children : null}
       {loginState === LoginState.Unauthenticated || loginState === LoginState.Unknown ? (
         <LoginForm
-          onLogin={(username, password, repoUrl) => {
+          error={loginError}
+          onLogin={async (username, password, repoUrl) => {
             setCurrentRepoUrl(repoUrl)
-            currentRepo.authentication.login(username, password)
+            try {
+              setLoginError('')
+              const result = await currentRepo.authentication.login(username, password)
+              if (!result) {
+                setLoginError('Failed to log in.')
+              }
+            } catch (error) {
+              setLoginError(error.toString())
+            }
           }}
         />
       ) : null}
