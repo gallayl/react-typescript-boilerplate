@@ -11,7 +11,7 @@ module.exports = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     publicPath: '/',
-    path: path.resolve(__dirname + '/bundle/assets'),
+    path: path.resolve(__dirname + '/bundle'),
   },
   optimization: {
     splitChunks: {
