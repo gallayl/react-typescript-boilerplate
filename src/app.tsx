@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, CssBaseline, Tooltip, Typography } from '@material-ui/core'
+import snLogo from './assets/sensenet_logo_transparent.png'
 import { useCurrentUser } from './hooks/use-current-user'
 import { useRepository } from './hooks/use-repository'
 
@@ -15,6 +16,10 @@ export const App: React.FunctionComponent = () => {
         width: '100%',
         height: '100%',
         flexDirection: 'column',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundImage: `url(${snLogo})`,
+        backgroundSize: 'auto',
       }}>
       <CssBaseline />
       <Typography variant="h3" gutterBottom>
