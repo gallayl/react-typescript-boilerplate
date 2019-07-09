@@ -2,12 +2,22 @@ import React, { createContext, useEffect, useState } from 'react'
 import { FormsAuthenticationService, LoginState, Repository } from '@sensenet/client-core'
 import { RepositoryConfiguration } from '@sensenet/client-core/dist/Repository/RepositoryConfiguration'
 import { CircularProgress } from '@material-ui/core'
-import { LoginForm } from './components/login-form'
+import { LoginForm } from '../components/login-form'
 
+/**
+ * React context that stores a sensenet Repository object
+ */
 export const RepositoryContext = createContext(new Repository())
 
+/**
+ * The last repository will be stored in your local storage with this key
+ */
 export const lastRepositoryKey = 'sn-boilerplate-last-repository'
 
+/**
+ * Container component that will provide a Repository object through a Context
+ * @param props The repository settings
+ */
 export const RepositoryProvider: React.FunctionComponent<
   Omit<Partial<RepositoryConfiguration>, 'repositoryUrl'>
 > = props => {

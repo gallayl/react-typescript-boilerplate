@@ -2,6 +2,14 @@
 
 Boilerplate app for sensenet SPA development with React and Typescript
 
+## Package content
+
+- An example _Hello World_ React SPA with sensenet repository login, written in Typescript ✨
+- An example Jest test with Enzyme 👓
+- Preconfigured Webpack build 🧱
+- prettier and eslint 💅
+- husky precommit hook 🐶
+
 ## Getting started
 
 ### Using as a tempalte
@@ -23,10 +31,20 @@ You can simply run `npm run build` or `yarn build` to create the bundle. It will
 
 1. Simply run `npm run test` or `yarn test` to run the tests. A coverage report will be also generated to the `./coverage` directory
 
-## Package content
+### Application Structure
 
-- An example _Hello World_ React SPA with sensenet repository login, written in Typescript ✨
-- An example Jest test with Enzyme 👓
-- Preconfigured Webpack build 🧱
-- prettier and eslint 💅
-- husky precommit hook 🐶
+- src
+  | - assets
+  | | - static assets like images, fonts, etc...
+  | - components
+  | | - generic components like forms, buttons, inputs
+  | - context
+  | | - React contexts and context providers
+  | - hooks
+  | | - Custom React hooks like useRepository or useCurrentUser.
+  | ...
+  | main / container components, layouts
+  | ...
+  | - app.tsx - The main entry point of your application
+  | - index.tsx - React and Sensenet Repository initialization
+  | - style.css - generic css overrides

@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 import { Button, Divider, Paper, TextField, Typography } from '@material-ui/core'
-import { lastRepositoryKey } from '../repository-provider'
+import { lastRepositoryKey } from '../context/repository-provider'
 
 export interface LoginFormProps {
+  /**
+   * Callback that will be called when the user clicks on the Login button
+   */
   onLogin: (username: string, passowrd: string, repository: string) => void
 }
 
+/**
+ * Login component for Sensenet repositories
+ * @param props The Props object
+ */
 export const LoginForm: React.FunctionComponent<LoginFormProps> = props => {
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')

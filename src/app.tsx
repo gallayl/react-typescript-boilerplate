@@ -4,6 +4,9 @@ import snLogo from './assets/sensenet_logo_transparent.png'
 import { useCurrentUser } from './hooks/use-current-user'
 import { useRepository } from './hooks/use-repository'
 
+/**
+ * The main entry point of your app. You can start h@cking from here ;)
+ */
 export const App: React.FunctionComponent = () => {
   const usr = useCurrentUser()
   const repo = useRepository()
