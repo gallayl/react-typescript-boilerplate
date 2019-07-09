@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Divider, Paper, TextField, Typography } from '@material-ui/core'
+import { lastRepositoryKey } from '../repository-provider'
 
 export interface LoginFormProps {
   onLogin: (username: string, passowrd: string, repository: string) => void
@@ -8,7 +9,7 @@ export interface LoginFormProps {
 export const LoginForm: React.FunctionComponent<LoginFormProps> = props => {
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
-  const [url, setUrl] = useState('')
+  const [url, setUrl] = useState(localStorage.getItem(lastRepositoryKey) || '')
 
   return (
     <div style={{ width: '100%', height: '100%', display: 'flex' }}>

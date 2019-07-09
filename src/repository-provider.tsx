@@ -6,15 +6,18 @@ import { LoginForm } from './components/login-form'
 
 export const RepositoryContext = createContext(new Repository())
 
+export const lastRepositoryKey = 'sn-boilerplate-last-repository'
+
 export const RepositoryProvider: React.FunctionComponent<
   Omit<Partial<RepositoryConfiguration>, 'repositoryUrl'>
 > = props => {
-  const [currentRepoUrl, setCurrentRepoUrl] = useState('https://dev.demo.sensenet.com')
+  const [currentRepoUrl, setCurrentRepoUrl] = useState(localStorage.getItem(lastRepositoryKey) || '')
   const [currentRepo, setCurrentRepo] = useState(new Repository({ ...props, repositoryUrl: currentRepoUrl }))
 
   const [loginState, setLoginState] = useState(LoginState.Unknown)
 
   useEffect(() => {
+    localStorage.setItem(lastRepositoryKey, currentRepoUrl)
     const repo = new Repository({ ...props, repositoryUrl: currentRepoUrl })
     FormsAuthenticationService.Setup(repo)
     setCurrentRepo(repo)
