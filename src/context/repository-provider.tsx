@@ -1,8 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { FormsAuthenticationService, LoginState, Repository } from '@sensenet/client-core'
 import { RepositoryConfiguration } from '@sensenet/client-core/dist/Repository/RepositoryConfiguration'
-import { CircularProgress } from '@material-ui/core'
 import { LoginForm } from '../components/login-form'
+import { FullScreenLoader } from '../components/full-screen-loader'
 
 /**
  * React context that stores a sensenet Repository object
@@ -37,7 +37,7 @@ export const RepositoryProvider: React.FunctionComponent<
 
   return (
     <RepositoryContext.Provider value={currentRepo}>
-      {loginState === LoginState.Pending ? <CircularProgress /> : null}
+      {loginState === LoginState.Pending ? <FullScreenLoader /> : null}
       {loginState === LoginState.Authenticated ? props.children : null}
       {loginState === LoginState.Unauthenticated || loginState === LoginState.Unknown ? (
         <LoginForm
