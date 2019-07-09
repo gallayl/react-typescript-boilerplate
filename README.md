@@ -14,7 +14,7 @@ Boilerplate app for sensenet SPA development with React and Typescript
 
 ## Getting started
 
-### Using as a tempalte
+### Using as a template
 
 1. Create a GIT repository with [this template](https://github.com/SenseNet/sn-react-typescript-boilerplate/generate)
 1. Clone your repository with `git clone <enter-your-git-repo-url-here>`
