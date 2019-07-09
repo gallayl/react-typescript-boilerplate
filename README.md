@@ -1,2 +1,32 @@
 # sn-react-typescript-boilerplate
+
 Boilerplate app for sensenet SPA development with React and Typescript
+
+## Getting started
+
+### Using as a tempalte
+
+1. Create a GIT repository with [this template](https://github.com/SenseNet/sn-react-typescript-boilerplate/generate)
+1. Clone your repository with `git clone <enter-your-git-repo-url-here>`
+1. Install the package dependencies with `npm install` or `yarn install`
+
+### Starting the dev server
+
+1. Start the Webpack dev server with `npm run start` or `yarn start`
+1. You can browse the app once the build has been finished at [http://localhost:8080/](http://localhost:8080/)
+
+### Building the project
+
+You can simply run `npm run build` or `yarn build` to create the bundle. It will saved to the `./bundle` directory
+
+### Running tests
+
+1. Simply run `npm run test` or `yarn test` to run the tests. A coverage report will be also generated to the `./coverage` directory
+
+## Package content
+
+- An example _Hello World_ React SPA with sensenet repository login, written in Typescript ✨
+- An example Jest test with Enzyme 👓
+- Preconfigured Webpack build 🧱
+- prettier and eslint 💅
+- husky precommit hook 🐶
