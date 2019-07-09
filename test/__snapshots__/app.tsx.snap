@@ -6,6 +6,7 @@ exports[`Layout Matches snapshot 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexDirection": "column",
       "height": "100%",
       "justifyContent": "center",
       "width": "100%",
@@ -14,11 +15,23 @@ exports[`Layout Matches snapshot 1`] = `
 >
   <CssBaseline />
   <WithStyles(ForwardRef(Typography))
+    gutterBottom={true}
     variant="h3"
   >
-    <WithStyles(ForwardRef(Button))>
-      anyád 💖
-    </WithStyles(ForwardRef(Button))>
+    Hello, 
+    Visitor
+     😎
   </WithStyles(ForwardRef(Typography))>
+  <WithStyles(Tooltip)
+    title="Return to the Login screen and select another repository"
+  >
+    <WithStyles(ForwardRef(Button))
+      color="primary"
+      onClick={[Function]}
+      variant="outlined"
+    >
+      Log out 🚪
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(Tooltip)>
 </div>
 `;
