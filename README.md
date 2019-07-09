@@ -8,7 +8,7 @@ Boilerplate app for sensenet SPA development with React and Typescript
 - An example Jest test with Enzyme 👓
 - Preconfigured Webpack build 🧱
 - prettier and eslint 💅
-- husky precommit hook 🐶
+- husky lint & prettier precommit hook ⚓
 
 ## Getting started
 
@@ -33,6 +33,7 @@ You can simply run `npm run build` or `yarn build` to create the bundle. It will
 
 ### Application Structure
 
+```
 - src
   | - assets
   | | - static assets like images, fonts, etc...
@@ -48,3 +49,9 @@ You can simply run `npm run build` or `yarn build` to create the bundle. It will
   | - app.tsx - The main entry point of your application
   | - index.tsx - React and Sensenet Repository initialization
   | - style.css - generic css overrides
+```
+
+## Recommended goodies
+
+- [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
