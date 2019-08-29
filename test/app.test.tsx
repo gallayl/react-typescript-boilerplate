@@ -13,9 +13,7 @@ describe('Layout', () => {
 
   it('should trigger logout on logout button click', () => {
     const repo = new Repository()
-
     repo.authentication.logout = jest.fn()
-
     const l = mount(
       <RepositoryContext.Provider value={repo}>
         <App />
