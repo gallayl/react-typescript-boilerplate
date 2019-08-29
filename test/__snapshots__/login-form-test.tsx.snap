@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FullScreenLoader Matches snapshot 1`] = `
+exports[`Login Form Matches snapshot 1`] = `
 <div
   style={
     Object {
@@ -90,7 +90,7 @@ exports[`FullScreenLoader Matches snapshot 1`] = `
 </div>
 `;
 
-exports[`FullScreenLoader Matches snapshot with error 1`] = `
+exports[`Login Form Matches snapshot with error 1`] = `
 <div
   style={
     Object {

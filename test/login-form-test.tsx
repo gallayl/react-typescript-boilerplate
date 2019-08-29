@@ -3,7 +3,7 @@ import React from 'react'
 import { TextField } from '@material-ui/core'
 import { LoginForm } from '../src/components/login-form'
 
-describe('FullScreenLoader', () => {
+describe('Login Form', () => {
   it('Matches snapshot', () => {
     const l = shallow(<LoginForm onLogin={() => {}} />)
     expect(l).toMatchSnapshot()
