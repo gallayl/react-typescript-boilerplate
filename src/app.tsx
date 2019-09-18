@@ -1,7 +1,5 @@
 import React from 'react'
 import { CssBaseline, Typography } from '@material-ui/core'
-import snLogo from './assets/sensenet_logo_transparent.png'
-
 /**
  * The main entry point of your app. You can start h@cking from here ;)
  */
@@ -17,7 +15,6 @@ export const App: React.FunctionComponent = () => {
         flexDirection: 'column',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${snLogo})`,
         backgroundSize: 'auto',
       }}>
       <CssBaseline />
