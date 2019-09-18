@@ -6,7 +6,7 @@ Boilerplate app for sensenet SPA development with React and Typescript
 
 ## Package content
 
-- An example _Hello World_ React SPA with sensenet repository login, written in Typescript ✨
+- An example _Hello World_ React SPA written in Typescript ✨
 - An example Jest test with Enzyme 👓
 - Preconfigured Webpack build 🧱
 - prettier and eslint 💅
@@ -52,7 +52,7 @@ You can simply run `npm run build` or `yarn build` to create the bundle. It will
   | main / container components, layouts
   | ...
   | - app.tsx - The main entry point of your application
-  | - index.tsx - React and Sensenet Repository initialization
+  | - index.tsx - React and app initialization
   | - style.css - generic css overrides
 ```
 
