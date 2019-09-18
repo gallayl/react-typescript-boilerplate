@@ -6,9 +6,7 @@
     "composite": false,
     "jsx": "react",
     "rootDir": "./src",
-    "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src", "./typings"]
 }
