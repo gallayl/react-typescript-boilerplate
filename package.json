@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "fix:prettier": "prettier \"{,!(dist|temp|bundle)/**/}*.{ts,tsx}\" --write",
-    "build": "rimraf bundle && webpack",
+    "build": "rimraf bundle && webpack --config webpack.prod.js",
     "start": "webpack-dev-server --progress",
     "test": "jest --coverage",
     "lint": "eslint . --ext .tsx,.ts --cache"
@@ -62,7 +62,8 @@
     "webpack": "^4.32.2",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "@furystack/inject": "4.0.2",
