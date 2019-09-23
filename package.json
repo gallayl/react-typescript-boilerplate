@@ -15,7 +15,7 @@
   "scripts": {
     "fix:prettier": "prettier \"{,!(dist|temp|bundle)/**/}*.{ts,tsx}\" --write",
     "build": "rimraf bundle && webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --progress",
+    "start": "webpack-dev-server --progress --config webpack.prod.js",
     "test": "jest --coverage",
     "lint": "eslint . --ext .tsx,.ts --cache"
   },
