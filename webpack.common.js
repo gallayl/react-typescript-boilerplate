@@ -1,6 +1,6 @@
 var path = require('path')
 const webpack = require('webpack')
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TsConfigWebpackPlugin = require('ts-config-webpack-plugin')
 
@@ -45,11 +45,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-      // { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
-
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      // { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader', exclude: /monaco-editor/ },
       {
         test: /\.css$/,
         use: [
