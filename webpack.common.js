@@ -31,13 +31,13 @@ module.exports = {
     runtimeChunk: false,
   },
   // Enable sourcemaps for debugging webpack's output.
-  devtool: 'eval-source-map', // 'source-map',
+  devtool: 'source-map', // 'source-map',
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: ['.ts', '.tsx', '.js', '.json'],
   },
   plugins: [
-    new BundleAnalyzerPlugin({ analyzerPort: 8745 }),
+    // new BundleAnalyzerPlugin({ analyzerPort: 8745 }),
     new TsConfigWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './index.html',
