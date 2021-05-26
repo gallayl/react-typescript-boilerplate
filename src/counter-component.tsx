@@ -11,9 +11,12 @@ export const Counter: React.FunctionComponent<{ default: number }> = props => {
     <span>
       <button onClick={() => setCurrentCount(currentCount + 1)}>+</button>
       <input
-        defaultValue={`${currentCount.toString()}/${props.default.toString()}`}
+        value={`${currentCount.toString()}/${props.default.toString()}`}
         style={{
           color: currentCount === props.default ? 'darkgreen' : 'red',
+        }}
+        onChange={() => {
+          /** */
         }}
       />
       <button onClick={() => setCurrentCount(currentCount - 1)}>-</button>

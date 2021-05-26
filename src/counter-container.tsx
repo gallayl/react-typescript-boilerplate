@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Counter } from './counter-component'
 
+const counterCount = 1000
+
 export const CounterContainer: React.FunctionComponent = () => {
   const [values, setValues] = useState<number[]>([])
 
@@ -8,10 +10,7 @@ export const CounterContainer: React.FunctionComponent = () => {
     <div>
       <button
         onClick={() => {
-          const newValues = []
-          for (let index = 0; index < 1000; index++) {
-            newValues.push(Math.round(Math.random() * 1000))
-          }
+          const newValues = new Array(counterCount).fill(0, 0, counterCount).map(() => Math.round(Math.random() * 1000))
           setValues([...newValues])
         }}>
         randomize

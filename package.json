@@ -15,7 +15,7 @@
   "scripts": {
     "fix:prettier": "prettier \"{,!(dist|temp|bundle)/**/}*.{ts,tsx}\" --write",
     "build": "rimraf bundle && webpack --config webpack.prod.js",
-    "start": "webpack serve --progress --config webpack.prod.js",
+    "start": "webpack serve --progress --config webpack.dev.js",
     "test": "jest --coverage",
     "lint": "eslint . --ext .tsx,.ts --cache",
     "clean": "rimraf bundle"
@@ -29,6 +29,8 @@
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
+    "@types/react-router": "^5.1.14",
+    "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "awesome-typescript-loader": "^5.2.1",
@@ -67,9 +69,12 @@
     "@furystack/inject": "4.0.65",
     "@furystack/logging": "^2.0.72",
     "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@sensenet/client-utils": "^2.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "tslib": "^2.2.0"
   },
   "husky": {

@@ -17,14 +17,18 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
       cacheGroups: {
+        material: {
+          test: /[\\/]node_modules[\\/]@material-ui[\\/]/,
+          name: 'material',
+        },
+        react: {
+          test: /[\\/]node_modules[\\/]react[\\/]/,
+          name: 'react',
+        },
         commons: {
           minChunks: 2,
           name: 'vendors',
           chunks: 'all',
-        },
-        monaco: {
-          test: /[\\/]node_modules[\\/]monaco-editor[\\/]/,
-          name: 'monaco',
         },
       },
     },
