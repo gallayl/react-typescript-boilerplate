@@ -37,7 +37,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
   },
   plugins: [
-    // new BundleAnalyzerPlugin({ analyzerPort: 8745 }),
+    new BundleAnalyzerPlugin({ analyzerPort: 8745 }),
     new TsConfigWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './index.html',
